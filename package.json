@@ -1,0 +1,12 @@
+{
+  "name": "node-test",
+  "version": "1",
+  "description": "web scraping ",
+  "main": "index.js",
+  "author": "mehdi dgrs",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
