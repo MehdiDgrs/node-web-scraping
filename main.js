@@ -45,7 +45,11 @@ let checkForAvailability = (data) => {
 };
 
 (function schedule() {
-  fetchDataHash().then((returnedTr) => checkForAvailability(returnedTr));
-  console.log("process finished,waiting for 5 minutes");
-  setTimeout(() => schedule(), 1000 * 60 * 5);
+  fetchDataHash()
+    .then((returnedArray) => {
+      checkForAvailability(returnedArray);
+      console.log("process finished,waiting for 5 minutes");
+      setTimeout(() => schedule(), 1000 * 60 * 5);
+    })
+    .catch((err) => console.log("error in schduler"));
 })();
